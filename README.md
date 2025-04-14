@@ -1,37 +1,46 @@
-# my_app
+# PBB-B Mobile Database Assignment
 
-A Flutter application built with MVVM architecture and Clean Architecture principles.
+## Student Information
 
-## Getting Started
+- **Name:** Farros Hilmi Syafei
+- **NRP:** 5025201012
+- **Class:** PBB B
 
-This project is based on the Flutter MVVM Boilerplate.
+## Assignment Overview
 
-### Prerequisites
+This Flutter application demonstrates the implementation of local database storage using **Hive**. The primary goal was to implement basic Create, Read, Update, and Delete (CRUD) operations based on the assignment requirements.
 
-- Flutter SDK (3.0.0 or higher)
-- Dart SDK (2.17.0 or higher)
+## Hive Implementation (NRP % 4 == 0)
 
-### Installation
+Based on the calculation `5025201012 % 4 = 0`, the **Hive** database was chosen for this assignment.
 
-1. Clone the repository
-2. Run `flutter pub get` to install dependencies
-3. Run the app with `flutter run`
+### Simple CRUD Example Screen
 
-## Architecture
+A dedicated screen (`lib/features/7_hive/presentation/screens/hive_example_screen.dart`) was created to showcase basic Hive operations using a generic box (`Hive.box('mybox')`) without a specific data model.
 
-This project follows Clean Architecture principles with an MVVM pattern for the presentation layer:
+**Functionality:**
 
-- **Domain Layer** - Business logic and rules
-- **Data Layer** - Data handling and repository implementations
-- **Presentation Layer** - UI and view models
+- **Write:** Creates or updates data `['Farros', '5025201012', 'ITS']` associated with the key `user_5025201012`.
+- **Read:** Retrieves the data associated with the key `user_5025201012`.
+- **Delete:** Removes the data associated with the key `user_5025201012`.
 
-## Features
+**Screenshot:**
 
-- Feature 1
-- Feature 2
-- Feature 3
+![Hive Example Screen](assets/images/Simulator%20Screenshot%20-%20iPhone%2016%20Plus.png)
 
-## Testing
+**Console Output Example:**
 
-- Run tests with `flutter test`
-- Run coverage with `flutter test --coverage`
+```log
+flutter: Wrote data: [Farros, 5025201012, ITS]
+flutter: Read data: [Farros, 5025201012, ITS]
+flutter: Deleted data with key user_5025201012
+```
+
+**Implementation Details:**
+
+For a more detailed explanation of how this Hive example is implemented, see the [Hive Feature README](./lib/features/7_hive/README.md).
+
+### Model-Based CRUD Example (Settings Screen)
+
+Additionally, CRUD operations using a Hive model (`User` class with `TypeAdapter`) were integrated into the Settings screen (`lib/features/5_setting/5_presentation/screens/settings_screen.dart`). This demonstrates storing structured data.
+
