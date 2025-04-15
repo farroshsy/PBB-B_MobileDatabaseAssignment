@@ -7,6 +7,7 @@ import 'package:my_app/core/di/injection_container.dart' as di;
 import 'package:my_app/features/0_auth/4_providers/auth_state_notifier.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:my_app/features/common/data/models/user_model.dart';
+import 'package:my_app/features/230325_assignment/presentation/screens/assignment_screen.dart';
 
 Future<void> main() async {
   // Ensure Flutter bindings are initialized
@@ -18,9 +19,11 @@ Future<void> main() async {
 
   // Register Adapters
   Hive.registerAdapter(UserAdapter());
+  Hive.registerAdapter(AssignmentItemAdapter());
 
   // Open the generic box used in the example
   await Hive.openBox('mybox');
+  await Hive.openBox<AssignmentItem>('assignmentBox');
 
   // Initialize dependency injection
   await di.init(); 

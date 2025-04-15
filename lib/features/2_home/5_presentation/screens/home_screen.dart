@@ -89,8 +89,15 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
              const SizedBox(height: 16),
              Center(
                child: ElevatedButton(
+                 onPressed: () => context.push('/assignment'),
+                 child: const Text('230325 Assignment'),
+               ),
+             ),
+             const SizedBox(height: 8),
+             Center(
+               child: ElevatedButton(
                  onPressed: () => context.push('/hive_example'),
-                 child: const Text('Go to Simple Hive Example'),
+                 child: const Text('Go to Hive Example Assignment'),
                ),
              ),
              const SizedBox(height: 16),

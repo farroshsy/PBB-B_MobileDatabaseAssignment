@@ -43,4 +43,3 @@ For a more detailed explanation of how this Hive example is implemented, see the
 ### Model-Based CRUD Example (Settings Screen)
 
 Additionally, CRUD operations using a Hive model (`User` class with `TypeAdapter`) were integrated into the Settings screen (`lib/features/5_setting/5_presentation/screens/settings_screen.dart`). This demonstrates storing structured data.
-

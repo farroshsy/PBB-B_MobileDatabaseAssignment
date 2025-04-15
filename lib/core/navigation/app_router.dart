@@ -16,7 +16,8 @@ import 'package:my_app/features/3_notification/5_presentation/screens/notificati
 import 'package:my_app/features/4_profile/5_presentation/screens/profile_screen.dart';
 import 'package:my_app/features/5_setting/5_presentation/screens/settings_screen.dart';
 import 'package:my_app/features/6_splash/5_presentation/screens/splash_screen.dart';
-import 'package:my_app/features/7_hive/presentation/screens/hive_example_screen.dart';
+import 'package:my_app/features/7_hive/5_presentation/screens/hive_example_screen.dart';
+import 'package:my_app/features/230325_assignment/presentation/screens/assignment_screen.dart';
 import 'package:my_app/core/navigation/main_shell.dart'; // Import the shell widget
 
 /// Authentication notifier that tracks authentication state for the router
@@ -161,6 +162,14 @@ class AppRouter {
               path: '/hive_example',
               pageBuilder: (context, state) => _buildPage(
                 context: context, state: state, child: const HiveExampleScreen(),
+              ),
+            ),
+            GoRoute(
+              path: '/assignment',
+              pageBuilder: (context, state) => _buildPage(
+                context: context,
+                state: state,
+                child: const AssignmentScreen(),
               ),
             ),
           ],
